@@ -142,6 +142,26 @@ body {
   color: #2e2f42;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition-property: color;
+}
+
+.active-link {
+  color: #404bbf;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item:nth-child(1)::after {
+  content: '';
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background-color: #404bbf;
+  display: block;
+  position: absolute;
+  bottom: -1px;
 }
 
 .nav-link:hover,
@@ -158,6 +178,7 @@ body {
 .address-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition-property: color;
 }
 
 /* ============ HERO ============ */
@@ -167,6 +188,17 @@ body {
   color: #ffffff;
   padding-top: 188px;
   padding-bottom: 188px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+  background-size: cover;
 }
 
 .hero-title {
@@ -194,6 +226,7 @@ body {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   min-width: 169px;
   height: 56px;
+  transition-property: background-color;
 }
 
 .hero-btn:hover,
@@ -209,6 +242,21 @@ body {
 }
 .about-item {
   width: calc((100% - 24px) / 4);
+}
+
+.about-item-top {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.about-icon {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 /* ============ TEAM ============ */
