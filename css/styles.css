@@ -310,8 +310,11 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-item:hover .icon-link,
-.team-item:focus .icon-link {
+.team-item:hover .icon-link {
+  background-color: #404bbf;
+}
+
+.icon-link:focus {
   background-color: #404bbf;
 }
 
@@ -365,9 +368,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   background-color: #4d5ae5;
   position: absolute;
   top: 0;
