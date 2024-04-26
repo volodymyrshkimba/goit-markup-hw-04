@@ -99,6 +99,8 @@ body {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header .container {
@@ -199,6 +201,7 @@ body {
     ),
     url(../images/hero-bg.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-clip: padding-box;
   background-size: cover;
 }
@@ -249,17 +252,17 @@ body {
 }
 
 .about-item-top {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  display: flex;
+  height: 112px;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-icon {
-  margin-left: auto;
-  margin-right: auto;
   display: block;
 }
 
@@ -283,13 +286,15 @@ body {
 }
 
 .team-item-bottom {
-  padding: 32px 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .icon-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 24px;
 }
 
 .icon-link {
@@ -305,7 +310,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-item:hover .icon-link {
+.team-item:hover .icon-link,
+.team-item:focus .icon-link {
   background-color: #404bbf;
 }
 
@@ -316,6 +322,10 @@ body {
 
 .team .item-text {
   margin-bottom: 8px;
+}
+
+.icon {
+  fill: #f4f4fd;
 }
 
 /* ============ PORTFOLIO ============ */
@@ -352,6 +362,9 @@ body {
 }
 
 .overlay {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
   padding-top: 40px;
   padding-left: 32px;
   padding-right: 32px;
@@ -368,13 +381,7 @@ body {
 }
 
 .portfolio-item:hover .overlay {
-  transform: translatey(0);
-}
-
-.overlay-text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
+  transform: translatey(0%);
 }
 
 /* ============ FOOTER ============ */
@@ -387,9 +394,11 @@ body {
 
 .footer-container {
   display: flex;
-  column-gap: 120px;
+  align-items: baseline;
 }
-
+.footer-left-side {
+  margin-right: 120px;
+}
 .page-footer .logo-part {
   color: #f4f4fd;
 }
@@ -424,6 +433,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icon-link:hover {
+.footer-icon-link:hover,
+.footer-icon-link:focus {
   background-color: #31d0aa;
 }
